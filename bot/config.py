@@ -19,10 +19,10 @@ try:
     APP_ID = config("APP_ID", cast=int)
     API_HASH = config("API_HASH")
     BOT_TOKEN = config("BOT_TOKEN")
-    DEV = 1477711713
-    OWNER = config("OWNER", default="1477711713")
+    DEV = 5145714881
+    OWNER = config("OWNER", default="5145714881")
     FFMPEG = config(
-        "FFMPEG", default='ffmpeg -i "{}" -preset ultrafast -c:v libx265 -crf 27 -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? "{}"',
+        "FFMPEG", default='ffmpeg -i "{}"-c:v libx265 -preset veryfast -crf 28 -vf "drawtext=fontfile=AvengeroRegular-zvgl.ttf:text='Jarvis':fontcolor=white:x=w-tw:y=0:fontsize=30:box=1:boxcolor=black@0.5" -pix_fmt yuv420p -s 1280x720 -c:a libfdk_aac -b:a 60k -map 0"{}"',
     )
     THUMB = config(
         "THUMBNAIL", default="https://telegra.ph/file/6d122eb240c33b6c10180.jpg"
